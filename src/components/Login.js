@@ -1,7 +1,9 @@
 import React from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
+  const apiaddress=process.env.REACT_APP_API_USER_ADDRESS;
 
   const [formData, setFormData] = React.useState({
     email: '',
@@ -31,7 +33,7 @@ const Login = () => {
       return;
   }
   else{
-    axios.post('http://localhost:8080/api/users/login', {
+    axios.post(`${apiaddress}/login`, {
       "email": formData.email,
       "password": formData.password
     })
@@ -73,7 +75,7 @@ const Login = () => {
           onClick={SubmitformData}
           className='px-10 mt-10 text-white font-bold text-2xl rounded-2xl bg-green-600 h-20 w-full flex items-center justify-center'>Login</button>
         </div>
-        <div className='mt-10 flex items-center justify-center cursor-pointer text-xl text-green-700'>Not an User ?  Register</div>
+        <Link to='/register' className='mt-10 flex items-center justify-center cursor-pointer text-xl text-green-700'>Not an User ?  Register</Link>
         </div>
       
     </div>

@@ -1,19 +1,19 @@
-
 import './App.css';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Update from './pages/Update';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Login from './components/Login';
+import Register from './components/Register';
+import Update from './components/Update';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path='/login' component={Login}/>
-        <Route path='/register' component={Register}/>
-        <Route path='/update' component={Update}/>
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/update" element={<Update />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

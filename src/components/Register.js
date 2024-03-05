@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     
@@ -18,6 +19,8 @@ const Register = () => {
           [e.target.name]: e.target.value
         });
       }
+      const apiaddress=process.env.REACT_APP_API_USER_ADDRESS;
+    
 
 
 
@@ -41,7 +44,7 @@ const Register = () => {
             return;
         }
         else{
-            axios.post('http://localhost:8080/api/users/register', {
+            axios.post(`${apiaddress}/register`, {
             "firstName": formData.firstName,
             "lastName": formData.lastName,
             "email": formData.email,
@@ -107,7 +110,7 @@ const Register = () => {
               onClick={SubmitformData} 
               className='px-10 mt-10 text-white font-bold text-2xl rounded-2xl bg-green-600 h-20 w-full flex items-center justify-center'>Register</button>
             </div>
-            <div className='mt-10 flex items-center justify-center cursor-pointer text-xl text-green-700'>Already Registered ?  Login</div>
+            <Link to='/login' className='mt-10 flex items-center justify-center cursor-pointer text-xl text-green-700'>Already Registered ?  Login</Link>
             </div>
           
         </div>

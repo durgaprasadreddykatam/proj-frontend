@@ -5,6 +5,7 @@ import { jwtDecode } from 'jwt-decode';
 const Update = () => {
   const userData = localStorage.getItem('token');
   const decoded =  jwtDecode(userData) ;
+  const apiaddress=process.env.REACT_APP_API_USER_ADDRESS;
 
   console.log("Decoded token:", decoded);
 
@@ -38,7 +39,7 @@ const Update = () => {
         return;
       }
       else{
-        axios.post('http://localhost:8080/api/users/update', {
+        axios.post(`${apiaddress}/update`, {
           "firstName":formData.firstName,
            "lastName":formData.lastName,
            "email":formData.email,
@@ -47,7 +48,7 @@ const Update = () => {
       }
     }
     else{
-      axios.post('http://localhost:8080/api/users/update', {
+      axios.post(`${apiaddress}/update1`, {
         "firstName":formData.firstName,
          "lastName":formData.lastName,
          "email":formData.email
