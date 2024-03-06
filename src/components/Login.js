@@ -1,9 +1,11 @@
 import React from 'react'
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
+
 
 const Login = () => {
   const apiaddress=process.env.REACT_APP_API_USER_ADDRESS;
+  const navigate = useNavigate();
 
   const [formData, setFormData] = React.useState({
     email: '',
@@ -39,8 +41,8 @@ const Login = () => {
     })
     .then(response => {
       if(response.status === 200){
-        console.log('User logged in successfully', response);
         localStorage.setItem('token', response.data.token);
+        navigate('/');
       }
     })
     .catch(error => {

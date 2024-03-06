@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React from 'react'
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 const Register = () => {
+  const navigate = useNavigate();
     
     const [formData, setFormData] = useState({
         firstName: '',
@@ -52,8 +53,8 @@ const Register = () => {
 })
 .then(response => {
     if(response.status === 200){
-   console.log('User registered successfully', response);
    localStorage.setItem('token', response.data.token);
+   navigate('/');
     }
 })
 .catch(error => {
