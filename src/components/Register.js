@@ -62,55 +62,58 @@ const Register = () => {
         }
       }
     return (
-        <div>
+        <div className='lg:bg-neutral-200 lg:h-screen'>
     
-          <div className='h-full w-full  py-5 '>
-            <div className=' flex justify-center w-full h-20 text-4xl font-bold items-center'>Register</div>
-            <div className='mt-10 px-10'>
+          <div className='h-full w-full  py-5 lg:py-10 flex items-center justify-center   '>
+            <div className='lg:w-1/3 lg:border-2 lg:p-5 lg:rounded-2xl lg:bg-white'>
+            <div className='md:px-40 flex justify-center w-full h-20 lg:h-12 text-4xl lg:text-3xl font-bold items-center'>Register</div>
+            <div className='mt-10 px-10 md:px-40 lg:px-10 lg:h-12 lg:w-full'>
               <input 
                 name='firstName'
                 onChange={handleFormChange}
               value={formData.firstName}
               placeholder='First Name' 
-              className='h-20 w-full rounded-2xl pl-5 text-3xl border-1'/>
+              className='h-20 lg:h-12 w-full rounded-2xl lg:rounded-xl pl-5 text-3xl lg:text-xl border-1'/>
             </div>
-            <div className='mt-10 px-10'>
+            <div className='mt-10 px-10 md:px-40 lg:px-10 lg:h-12'>
               <input
               name='lastName'
                 onChange={handleFormChange}
                placeholder='Last Name' 
-               className='h-20 w-full rounded-2xl pl-5 text-3xl border-1'/>
+               className='h-20 lg:h-12 w-full rounded-2xl lg:rounded-xl pl-5 text-3xl lg:text-xl border-1'/>
             </div>
-            <div className='mt-10 px-10'>
+            <div className='mt-10 px-10 md:px-40 lg:px-10 lg:h-12'>
               <input 
                 name='email'
                 onChange={handleFormChange}
               type='email'
               placeholder='Email' 
-              className='h-20 w-full rounded-2xl pl-5 text-3xl border-1'/>
+              className='h-20 lg:h-12 w-full rounded-2xl lg:rounded-xl pl-5 text-3xl lg:text-xl border-1'/>
             </div>
-            <div className='mt-10 px-10'>
+            <div className='mt-10 px-10 md:px-40 lg:px-10 lg:h-12'>
               <input 
                 name='password'
                 onChange={handleFormChange}
                 type='password'
               placeholder='Password' 
-              className='h-20 w-full rounded-2xl pl-5 text-3xl border-1'/>
+              className='h-20 lg:h-12 w-full rounded-2xl lg:rounded-xl pl-5 text-3xl lg:text-xl border-1'/>
             </div>
-            <div className='mt-10 px-10'>
+            <div className='mt-10 px-10 md:px-40 lg:px-10 lg:h-12'>
               <input 
                 name='confirmPassword'
                 onChange={handleFormChange}
                 type='password'
               placeholder='Confirm Password' 
-              className='h-20 w-full rounded-2xl pl-5 text-3xl border-1'/>
+              className='h-20 lg:h-12 w-full rounded-2xl lg:rounded-xl pl-5 text-3xl lg:text-xl border-1'/>
             </div>
-            <div className='mt-10 px-10'>
+            <div className='mt-10 px-10 md:px-40 lg:px-10'>
               <button 
               onClick={SubmitformData} 
-              className='px-10 mt-10 text-white font-bold text-2xl rounded-2xl bg-green-600 h-20 w-full flex items-center justify-center'>Register</button>
+              className='flex-shrink-0 px-10 mt-10 text-white font-bold text-2xl lg:text-xl rounded-2xl lg:rounded-xl bg-green-600 h-20 lg:h-12 w-full flex items-center justify-center'>Register</button>
             </div>
-            <Link to='/login' className='mt-10 flex items-center justify-center cursor-pointer text-xl text-green-700'>Already Registered ?  Login</Link>
+            <Link to='/login' className='mt-10 flex items-center justify-center cursor-pointer text-xl lg:text-lg text-green-700'>Already Registered ?  Login</Link>
+            </div>
+            
             </div>
           
         </div>
