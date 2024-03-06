@@ -35,7 +35,7 @@ const Update = () => {
     else{
       navigate('/login');
     }
-  }, []);
+  }, [navigate]);
 
 
 
