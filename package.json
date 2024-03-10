@@ -1,5 +1,5 @@
 {
-  "homepage": "http://durgaprasadreddykatam.github.io/proj-frontend",
+  "homepage": "http://durgaprasadreddykatam.github.io/",
   "name": "proj-frontend",
   "version": "0.1.0",
   "private": true,
@@ -8,7 +8,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.7",
-    "babel-jest": "^29.7.0",
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^4.0.0",
     "react": "^18.2.0",
@@ -43,11 +42,13 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.13",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
     "babel-jest": "^29.7.0",
     "dotenv": "^16.4.5",
     "ghpages": "^0.0.10",
     "react-router-dom": "^6.22.2",
-    "tailwindcss": "^3.4.1",
-    "@babel/plugin-proposal-private-property-in-object": "^7.16.13"
+    "tailwindcss": "^3.4.1"
   }
 }
